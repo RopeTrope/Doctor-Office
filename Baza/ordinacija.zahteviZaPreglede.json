@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "6500999906fefda47293c865"
+  },
+  "naziv": "Hirurska revaskularizacija miokarda",
+  "cena": 524000,
+  "trajanje": 300,
+  "specijalizacija": "Kardiohirurgija",
+  "status": null
+},
+{
+  "_id": {
+    "$oid": "6500a1ad2b0a730fc15b7367"
+  },
+  "naziv": "Post COVID paket",
+  "cena": 12000,
+  "trajanje": 42,
+  "specijalizacija": "Pulmologija",
+  "status": "Prihvaceno"
+},
+{
+  "_id": {
+    "$oid": "6500a1c52b0a730fc15b7369"
+  },
+  "naziv": "Spirometrija",
+  "cena": 2500,
+  "trajanje": 17,
+  "specijalizacija": "Pulmologija",
+  "status": "Prihvaceno"
+},
+{
+  "_id": {
+    "$oid": "6500a1f52b0a730fc15b736b"
+  },
+  "naziv": "Bronhoskopija",
+  "cena": 25000,
+  "trajanje": 100,
+  "specijalizacija": "Pulmologija",
+  "status": "Prihvaceno"
+},
+{
+  "_id": {
+    "$oid": "6500a20d2b0a730fc15b736d"
+  },
+  "naziv": "Pulmoloski paket",
+  "cena": 6000,
+  "trajanje": 30,
+  "specijalizacija": "Pulmologija",
+  "status": "Odbijeno"
+},
+{
+  "_id": {
+    "$oid": "6500a5a69260d3322f0732e0"
+  },
+  "naziv": "Epikutani testovi",
+  "cena": 6000,
+  "trajanje": 25,
+  "specijalizacija": "Dermatologija",
+  "status": "Prihvaceno"
+},
+{
+  "_id": {
+    "$oid": "6500a5c79260d3322f0732e2"
+  },
+  "naziv": "Fileri",
+  "cena": 25000,
+  "trajanje": 150,
+  "specijalizacija": "Dermatologija",
+  "status": null
+},
+{
+  "_id": {
+    "$oid": "6502d0905e41d1888b05c81a"
+  },
+  "naziv": "Sum na srcu",
+  "cena": 5000,
+  "trajanje": 20,
+  "specijalizacija": "Kardiologija",
+  "status": null
+},
+{
+  "_id": {
+    "$oid": "6508954ec488e9e9399bf726"
+  },
+  "naziv": "Kombinovane procedure",
+  "cena": 700000,
+  "trajanje": 240,
+  "specijalizacija": "Kardiohirurgija",
+  "status": "Prihvaceno"
+}]

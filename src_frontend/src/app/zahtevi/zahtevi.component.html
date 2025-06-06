@@ -1,0 +1,84 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container px-5">
+        <a class="navbar-brand" href="">PeroMedik</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="menadzer">Menadzer</a></li>
+                <li class="nav-item"><a class="nav-link    active" href="zahtevi">Zahtevi</a></li>
+                <li class="nav-item"><a class="nav-link" href="dodavanje_lekara">Novi Lekar</a></li>
+                <li class="nav-item"><a class="nav-link" href="menadzer_pregledi">Pregled</a></li>
+                <li class="nav-item"><a class="nav-link" href="promena_lozinke_menadzer">Promena Lozinke</a></li>
+            </ul>
+        </div>
+        <div class="btn-container">
+          <button   class="btn btn-danger login-popup-btn" (click)="odjaviSe()">Odjavi se</button>
+       </div>
+    </div>
+</nav>
+    <h2 style="text-align: center;">Zahtevi</h2>
+<br>
+<div class="container">
+  <div style="overflow-x:auto;">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Ime</th>
+        <th scope="col">Prezime</th>
+        <th scope="col">Korisnicko ime</th>
+        <th scope="col">Imejl </th>
+        <th scope="col">Adresa </th>
+        <th scope="col">Kontakt</th>
+        <th scope="col"></th>
+        <th scope="col">Prihvati</th>
+        <th scope="col">Odbij</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let z of zahtevi">
+        <th scope="row" style="font-size: large;">{{z.ime}}</th>
+        <td style="font-size: large;">{{z.prezime}}</td>
+        <td style="font-size: large;">{{z.korisnicko_ime}}</td>
+        <td style="font-size: large;">{{z.imejl}}</td>
+        <td style="font-size: large;">{{z.adresa}}</td>
+        <td style="font-size: large;">0{{z.kontakt}}</td>
+        <td><img src="{{z.slika}}" class="img-fluid img-thumbnail rounded-circle" style="width: 70px;height: 70px;"></td>
+        <td><button class="btn btn-success" (click)="prihvati(z)">Prihvati</button></td>
+        <td><button class="btn btn-danger" (click)="odbij(z)">Odbij</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div> 
+  <br> 
+
+
+
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+    <span class="text-light">© 2020 Copyright:</span>
+    <a class="text-light" href="">PeroMedik</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</html>

@@ -1,0 +1,162 @@
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+    
+    
+  </head>
+
+  <body>
+    <nav>
+        <!-- Logo on the left -->
+        <div class="logo">PeroMedik</div>
+        </nav>
+    <div class="container bootstrap snippets bootdey">
+        <div class="panel-body inf-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <img alt="" style="width:200px;height: 200px;" title="" class="img-circle img-thumbnail isTooltip" src="{{lekar?.slika}}" data-original-title="Usuario"> 
+
+                </div>
+                <div class="col-md-6">
+                    <strong>Informacije</strong><br>
+                    <div class="table-responsive">
+                    <table class="table table-user-information">
+                        <tbody>
+
+                            <tr>    
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                        Ime                                                
+                                    </strong>
+                                </td>
+                                <td>
+                                    <b>
+                                    {{lekar?.ime}}
+                                </b>     
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-user text-primary"></span>  
+                                        Prezime                                                
+                                    </strong>
+                                </td>
+                                <td >
+                                    <b>
+                                    {{lekar?.prezime}} 
+                                </b>
+                                </td>
+                            </tr>    
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                        Imejl                                               
+                                    </strong>
+                                </td>
+                                <td ><b>
+                                    {{lekar?.imejl}}
+                                </b>
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-briefcase text-primary"></span>
+                                        Specijalizacija                                               
+                                    </strong>
+                                </td>
+                                <td >
+                                    <b>
+                                    {{lekar?.specijalizacija}}
+                                </b>
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-earphone text-primary"></span>
+                                        Kontakt                                              
+                                    </strong>
+                                </td>
+                                <td>
+                                    <b>
+                                     0{{lekar?.kontakt}}
+                                    </b>
+                                </td>
+                            </tr>                                    
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+        <h2 style="text-align: center;">Pregledi koje lekar obavlja</h2>
+<div class="container">
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Naziv pregled</th>
+        <th scope="col">Cena</th>
+        <th scope="col"></th>
+        <th scope="col">Trajanje</th>
+    </tr>
+</thead>
+    <tbody>
+    <tr *ngFor="let p of pregledi">
+        <td scope="row">{{p?.naziv}}</td>
+        <td scope="row">{{p?.cena}} dinara<td>
+        <td scope="row" >{{p?.trajanje}} minuta</td>
+    </tr>
+</tbody>
+</table>
+</div>
+<div  class="container-sm">
+<h2 >Zakazivanje pregleda</h2>
+
+<div class="form-group" style="width:50%;">
+    <label for="ime" >Ime</label>
+    <select class="form-select form-select-lg" [(ngModel)]="pregled">
+        <option value="" disabled selected hidden>Odaberite uslugu</option>
+        <option *ngFor="let p of pregledi" >{{p?.naziv}}</option>
+    </select>
+  </div>
+  <div class="form-group" style="width: 50%;">
+    <label for="prezime">Datum:</label>
+    <input type="date" class="form-control" id="prezime" [(ngModel)]="datum">
+  </div>
+  <div class="form-group" style="width: 50%;">
+    <label for="spec">Vreme:</label>
+    <input type="time" class="form-control" id="spec" [(ngModel)]="vreme">
+  </div>
+  <br>
+  {{greska}}
+  <br>
+  <button type="button" class="btn btn-success" (click)="zakazi()" >Zakazi</button>
+  <br>
+  <br>
+</div>
+
+</body>
+<footer class="bg-light text-center text-lg-start" >
+    <!-- Copyright -->
+    <div class="text-center p-3"  style="background-color: rgb(112, 27, 27);">
+      <span class="text-light">© 2020 Copyright:</span>
+      <a class="text-light" href="">PeroMedik</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>

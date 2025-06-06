@@ -1,0 +1,52 @@
+.login-popup-heading>h4 {
+    color: #258b47;
+    font-size: 18px;
+    line-height: 30px;
+}
+.new_reg_popup, .new_login_popup {
+    border-radius: 2px;
+    min-height: 332px;
+    width: 50%;
+    margin: 0px auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom:5%;
+}
+.login-popup-btn {
+    background: #258b47;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    height: 38px;
+    line-height: 28px;
+    margin: 20px auto 5px;
+    width: 150px;
+    
+}
+a{
+     color: #258b47;
+}
+
+.greska{
+    color: red;
+}
+body{
+    background-color:   rgb(236, 253, 245);
+    min-height: 100vh;
+
+  }
+  nav {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <div class="container px-5">
+      <a class="navbar-brand" href="">PeroMedik</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link   active" aria-current="page" href="menadzer">Menadzer</a></li>
+              <li class="nav-item"><a class="nav-link" href="zahtevi">Zahtevi</a></li>
+              <li class="nav-item"><a class="nav-link" href="dodavanje_lekara">Novi Lekar</a></li>
+              <li class="nav-item"><a class="nav-link" href="menadzer_pregledi">Pregledi</a></li>
+              <li class="nav-item"><a class="nav-link" href="promena_lozinke_menadzer">Promena Lozinke</a></li>
+          </ul>
+      </div>
+      <div class="btn-container">
+       <button   class="btn btn-danger login-popup-btn" (click)="odjaviSe()">Odjavi se</button>
+    </div>
+  </div>
+</nav>
+<h2 style="text-align: center;">Lekari</h2>
+<br>
+<div class="container">
+  <div style="overflow-x:auto;">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Ime</th>
+        <th scope="col">Prezime</th>
+        <th scope="col">Specijalizacija </th>
+        <th scope="col">Imejl </th>
+        <th scope="col">Adresa </th>
+        <th scope="col"></th>
+        <th scope="col">Azuriraj</th>
+        <th scope="col">Obrisi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of lekari">
+        <th scope="row" style="font-size: large;">{{l.ime}}</th>
+        <td style="font-size: large;">{{l.prezime}}</td>
+        <td style="font-size: large;">{{l.specijalizacija}}</td>
+        <td style="font-size: large;">{{l.imejl}}</td>
+        <td style="font-size: large;">{{l.adresa}}</td>
+        <td><img src="{{l.slika}}" class="img-fluid img-thumbnail rounded-circle" style="width: 70px;height: 70px;"></td>
+        <td><button class="btn btn-primary" (click)="azurirajLekara(l)">Azuriraj</button></td>
+        <td><button  class="btn btn-danger" (click)="obrisiLekara(l)">Obrisi</button></td>
+      </tr>
+
+    </tbody>
+  </table> 
+  </div>
+</div> 
+<br>
+<h2 style="text-align: center;">Pacijenti</h2>
+<br>
+<div class="container">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Ime</th>
+        <th scope="col">Prezime</th>
+        <th scope="col">Korisnicko ime</th>
+        <th scope="col">Imejl</th>
+        <th scope="col">Adresa</th>
+        <th scope="col"></th>
+        <th scope="col">Azuriraj</th>
+        <th scope="col">Obrisi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pacijenti">
+        <th scope="row" style="font-size: large;">{{p.ime}}</th>
+        <td style="font-size: large;">{{p.prezime}}</td>
+        <td style="font-size: large;">{{p.korisnicko_ime}}</td>
+        <td style="font-size: large;">{{p.imejl}}</td>
+        <td style="font-size: large;">{{p.adresa}}</td>
+        <td><img src="{{p.slika}}" class="img-fluid img-thumbnail rounded-circle" style="width: 70px;height: 70px;"></td>
+        <td><button class="btn btn-primary" (click)="azurirajPacijenta(p)">Azuriraj</button></td>
+        <td><button class="btn btn-danger" (click)="obrisiPacijenta(p)">Obrisi</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+  <br>
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+    <span class="text-light">© 2020 Copyright:</span>
+    <a class="text-light" href="">PeroMedik</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>

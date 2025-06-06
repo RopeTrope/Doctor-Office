@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+    <header>
+    <nav>
+        <!-- Logo on the left -->
+        <div class="logo">PeroMedik</div>
+        </nav>
+    </header>
+
+<div class="login-popup-wrap new_login_popup "> 
+                        <div class="login-popup-heading text-center">
+                            <h4><i class="fa fa-lock" aria-hidden="true"></i> Prijavljivanje </h4>                        
+                        </div>
+                        <form id="loginMember" role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="user_id" placeholder="Korisnicko ime" name="user_id" [(ngModel)]="korisnicko_ime">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Lozinka" name="password" [(ngModel)]="lozinka">
+                            </div>
+                            <div class="form-check" >
+                                <ul style="list-style-type: none;">
+                               <li style="display: inline-block;"> <input class="form-check-input" type="radio" name="tip" id="exampleRadios1" value="pacijent" checked [(ngModel)]="tip">
+                                <label class="form-check-label" for="exampleRadios1" >Pacijent  
+                                </label></li>
+                                <li style="display: inline-block;padding-left: 100px;"><input class="form-check-input"  type="radio" name="tip" id="exampleRadios2" value="lekar" [(ngModel)]="tip">
+                                    <label class="form-check-label"  for="exampleRadios2">Lekar </label></li>
+                                  <br>
+                                </ul>
+                              </div>
+                            <button  class="btn btn-default login-popup-btn" (click)="login()">Prijavljivanje</button>
+                        </form>
+                        <div class="text-center"><a href="registracija">Registrujte se</a></div>
+                        <br>
+                        <div class="text-center greska">{{error}}</div>
+                    </div>
+                   
+                    </body>
+                    <footer class="bg-light text-center text-lg-start">
+                        <!-- Copyright -->
+                        <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+                          <span class="text-light">© 2020 Copyright:</span>
+                          <a class="text-light" href="">PeroMedik</a>
+                        </div>
+                        <!-- Copyright -->
+                      </footer>
+                      </html>

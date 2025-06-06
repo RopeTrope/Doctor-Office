@@ -1,0 +1,99 @@
+<html>
+<head>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container px-5">
+            <a class="navbar-brand" href="">PeroMedik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="menadzer">Menadzer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="zahtevi">Zahtevi</a></li>
+                    <li class="nav-item"><a class="nav-link    active" href="dodavanje_lekara">Novi Lekar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menadzer_pregledi">Pregledi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promena_lozinke_menadzer">Promena Lozinke</a></li>
+                </ul>
+            </div>
+            <div class="btn-container">
+                <button   class="btn btn-danger " (click)="odjaviSe()">Odjavi se</button>
+             </div>
+        </div>
+    </nav>
+
+<div class="login-popup-wrap new_login_popup "> 
+                        <div class="login-popup-heading text-center">
+                            <h4><i class="fa fa-lock" aria-hidden="true"></i> Dodaj Lekara </h4>                        
+                        </div>
+                        <form id="loginMember" role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="user_id" placeholder="Korisnicko ime" name="user_id" [(ngModel)]="korisnicko_ime">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Lozinka" name="password" [(ngModel)]="lozinka">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ime" placeholder="Ime" name="ime" [(ngModel)]="ime">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="prezime" placeholder="Prezime" name="prezime" [(ngModel)]="prezime">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="adresa" placeholder="Adresa" name="adresa" [(ngModel)]="adresa">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="kontakt" placeholder="Kontakt" name="kontakt" [(ngModel)]="kontakt">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="imejl" placeholder="Imejl" name="imejl" [(ngModel)]="imejl">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="broj_licence" placeholder="Broj licence" name="broj_licence" [(ngModel)]="broj_licence">
+                            </div>
+                            <div class="form-group">
+                                <select [(ngModel)]="specijalizacija" name="specijalizacija" class="form-select" style="height: 37px;font-size: 13px;">
+                                    <option value="" disabled selected hidden>Odaberite specijalizaciju</option>
+                                    <option *ngFor="let s of specijalizacije">{{s?.naziv}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ogranak" placeholder="Ogranak" name="ogranak" [(ngModel)]="ogranak">
+                            </div>
+                            <div>
+                                <input type="file" (change)="onFileSelected($event)" accept=".png, .jpg" />
+                                    <br /><br />  
+                            </div>
+                            
+                            <button  class="btn btn-default login-popup-btn" (click)="dodaj()">Dodaj</button>
+                        </form>
+                        <div class="text-center greska">{{error}}</div>
+                    </div>
+
+
+
+
+</body>
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+      <span class="text-light">© 2020 Copyright:</span>
+      <a class="text-light" href="">PeroMedik</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  </html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo on the left -->
+            <div class="logo">PeroMedik</div>
+            </nav>
+        </header>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<div class="login-popup-wrap new_login_popup "> 
+                        <div class="login-popup-heading text-center">
+                            <h4><i class="fa fa-lock" aria-hidden="true"></i> Registracija </h4>                        
+                        </div>
+                        <form id="loginMember" role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="user_id" placeholder="Korisnicko ime" name="user_id" [(ngModel)]="korisnicko_ime">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Lozinka" name="password" [(ngModel)]="lozinka">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="conf_password" placeholder="Potvrda lozinke" name="conf_password" [(ngModel)]="pot_lozinke">
+                                
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ime" placeholder="Ime" name="ime" [(ngModel)]="ime">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="prezime" placeholder="Prezime" name="prezime" [(ngModel)]="prezime">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="adresa" placeholder="Adresa" name="adresa" [(ngModel)]="adresa">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="kontakt" placeholder="Kontakt(oblika 0641234567)" name="kontakt" [(ngModel)]="kontakt">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="imejl" placeholder="Imejl" name="imejl" [(ngModel)]="imejl">
+                            </div>
+                            <div>
+                                <input type="file" (change)="onFileSelected($event)" accept=".png, .jpg" />
+                                    <br /><br /> 
+                            </div>
+                            
+                            <button  class="btn btn-default login-popup-btn" (click)="registruj()">Registruj se</button>
+                        </form>
+                        Vec imate nalog?<br>
+                        Kliknite da se prijavite<a href="login">  ovde</a>
+                        <br>
+                        <div class="text-center greska">{{error}}</div>
+                    </div>
+                </body>
+                <footer class="bg-light text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+                      <span class="text-light">© 2020 Copyright:</span>
+                      <a class="text-light" href="">PeroMedik</a>
+                    </div>
+                    <!-- Copyright -->
+                  </footer>
+                  </html>

@@ -1,0 +1,159 @@
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">PeroMedik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="lekar">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lekar_pregledi">Pregledi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="razno">Razno</a></li> 
+                </ul>
+            </div>
+            <div class="btn-container">
+                <button   class="btn btn-danger login-popup-btn" (click)="odjaviSe()">Odjavi se</button>
+             </div>
+            
+        </div>
+    </nav>
+
+<div class="container">
+    <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <div class="card h-100" style="text-align: center;">
+        <div class="card-body">
+            <div class="account-settings">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="{{lekar?.slika}}" style="height:150px;width:150px ;" class="rounded-circle" >
+                    </div>
+                    <h5 class="user-name">{{lekar?.ime}} {{lekar?.prezime}}</h5>
+                    <h6 class="user-email">{{lekar?.imejl}}</h6>
+                    <br>
+                    <h6>Promena profilne slike</h6>
+                    <label for="files" class="text-center btn btn-success">Prilozite fajl</label>
+                                    <input type="file" id="files" style="visibility: hidden;"
+                                        (change)="onFileSelected($event)" />
+                </div>      
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mb-2 text-primary">Promena podataka</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="fullName">Ime</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Unesite ime" [(ngModel)]="ime">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="eMail">Prezime</label>
+                        <input type="text" class="form-control" id="eMail" placeholder="Unesite prezime" [(ngModel)]="prezime">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="phone">Kontakt</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Unesite kontakt" [(ngModel)]="kontakt">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Broj licence</label>
+                        <input type="number" class="form-control" id="website" placeholder="Unesite broj licence" [(ngModel)]="broj_licence" >
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Specijalizacija</label>
+                        <select  class="form-control" [(ngModel)]="spec">
+                            <option  style="font-size: 13px;" *ngFor="let s of specijalizacije">{{s.naziv}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Adresa</label>
+                        <input type="text" class="form-control" id="website" placeholder="Unesite adresu" [(ngModel)]="adresa">
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <button type="button" id="submit" name="submit" class="btn btn-success" (click)="azurirajPodatke()" >Azuriraj</button>
+
+                        <br>
+       
+                        
+                        <span style="text-align: right;">
+                            <br>
+                        <button (click)="promena()" class="btn btn-link" style="float:right;color:#a8d326">Promena lozinke</button>
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="container">
+    <div style="overflow-x:auto;">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+        <th scope="col">Naziv pregleda</th>
+        <th scope="col">Specijalizacija</th>
+        <th scope="col">Trajanje</th>
+        <th scope="col">Cena</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of pregledi">
+        <td scope="row"><b>{{p.naziv}}</b></td>
+        <td scope="row">{{p.specijalizacija}}</td>
+        <td scope="row">{{p.trajanje}}</td>
+        <td scope="row">{{p.cena}}</td>
+        <td scope="row"><button class="btn btn-success" *ngIf="!p.status" (click)="dodaj(p)">Dodaj</button></td>
+        <td scope="row"><button class="btn btn-danger" *ngIf="p.status" (click)="izbaci(p)">Izbaci</button></td>
+    </tr>
+</tbody>
+    </table>
+    </div>
+</div>
+
+</body>
+<footer class="bg-light text-center text-lg-start" >
+    <!-- Copyright -->
+    <div class="text-center p-3"  style="background-color: rgb(112, 27, 27);">
+      <span class="text-light">© 2020 Copyright:</span>
+      <a class="text-light" href="">PeroMedik</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  </html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<header>
+    <nav>
+        <!-- Logo on the left -->
+        <div class="logo">PeroMedik</div>
+        </nav>
+    </header>
+<body>
+<div class="login-popup-wrap new_login_popup "> 
+                        <div class="login-popup-heading text-center">
+                            <h4><i class="fa fa-lock" aria-hidden="true"></i> Promena lozinke </h4>                        
+                        </div>
+                        <form id="loginMember" role="form">
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="user_id" placeholder="Unesite staru lozinku" name="old_pass" [(ngModel)]="old_pass">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Nova lozinka" name="new_pass" [(ngModel)]="new_pass">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="ime" placeholder="Potvrda nove lozinke" name="conf_pass" [(ngModel)]="conf_pass">
+                            </div>      
+                            <button class="btn btn-default login-popup-btn" (click)="promeniLozinku()">Promeni lozinku</button>
+                            <button class="btn btn-default login-popup-btn-red" (click)="otkazi()" >Otkazi</button>
+                        
+                        <p id="passwordError" style="color: red;"></p>
+                        <script>
+                        // Get a reference to the password input field and error message paragraph
+                        const passwordField = document.getElementById('password');
+                        const passwordError = document.getElementById('passwordError');
+
+                        // Add an event listener to the password input field
+                        passwordField.addEventListener('input', () => {
+                            // Get the user's input
+                            const userInput = passwordField.value;
+
+                            // Define the regular expression pattern
+                            const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$/;
+
+                            // Check if the input matches the pattern
+                            if (pattern.test(userInput)) {
+                            // Clear the error message if the input is valid
+                            passwordError.textContent = '';
+                            } else {
+                            // Display the error message if the input is invalid
+                            passwordError.textContent = 'Invalid password. Password must meet the specified requirements.';
+                            }
+                        });
+                        </script>
+                        </form>
+                        <div class="text-center greska">{{error}}</div>
+                    </div>
+                    <br>
+                </body>
+                <footer class="bg-light text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgb(112, 27, 27);">
+                      <span class="text-light">© 2020 Copyright:</span>
+                      <a class="text-light" href="">PeroMedik</a>
+                    </div>
+                    <!-- Copyright -->
+                  </footer>
+                  </html>

@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+    
+    
+  </head>
+  <body>
+    <nav>
+        <!-- Logo on the left -->
+        <div class="logo">PeroMedik</div>
+        <div class="btn-container">
+            <button   class="btn btn-outline-warning login-popup-btn" (click)="nazad()">Nazad</button>
+         </div>
+        </nav>
+    <div class="container bootstrap snippets bootdey">
+        <div class="panel-body inf-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <img alt="" style="width:200px;height: 200px;" title="" class="img-circle img-thumbnail isTooltip" src="{{pacijent?.slika}}" data-original-title="Usuario"> 
+
+                </div>
+                <div class="col-md-6">
+                    <strong>Informacije</strong><br>
+                    <div class="table-responsive">
+                    <table class="table table-user-information">
+                        <tbody>
+
+                            <tr>    
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                        Ime                                                
+                                    </strong>
+                                </td>
+                                <td>
+                                    <b>
+                                    {{pacijent?.ime}}
+                                </b>     
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-user text-primary"></span>  
+                                        Prezime                                                
+                                    </strong>
+                                </td>
+                                <td >
+                                    <b>
+                                    {{pacijent?.prezime}} 
+                                </b>
+                                </td>
+                            </tr>    
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                        Imejl                                               
+                                    </strong>
+                                </td>
+                                <td ><b>
+                                    {{pacijent?.imejl}}
+                                </b>
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-home text-primary"></span> 
+                                        Adresa                                             
+                                    </strong>
+                                </td>
+                                <td ><b>
+                                    {{pacijent?.adresa}}
+                                </b>
+                                </td>
+                            </tr>
+                            <tr>        
+                                <td>
+                                    <strong>
+                                        <span class="glyphicon glyphicon-earphone text-primary"></span>
+                                        Kontakt                                              
+                                    </strong>
+                                </td>
+                                <td>
+                                    <b>
+                                     0{{pacijent?.kontakt}}
+                                    </b>
+                                </td>
+                            </tr>                                    
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+        <br>
+        <div class="container">
+        <h2 class="text-align:center">Prehodni izvestaji</h2>
+        <br>
+        <div style="overflow-x:auto;">
+            <div style="overflow-x:auto;">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Ime lekara</th>
+                <th scope="col">Specijalizacija</th>
+                <th scope="col">Razlog dolaska</th>
+                <th scope="col">Dijagnoza</th>
+                <th scope="col">Terapija</th>
+                <th scope="col">datum</th>
+                <th scope="col">Vreme</th>
+                <th scope="col">Datum narednog pregleda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of izvestaji ">
+                <td>{{i.ime_lekara}}</td>
+                <td>{{i.spec_lekara}}</td>
+                <td>{{i.razlog}}</td>
+                <td>{{i.dijagnoza}}</td>
+                <td>{{i.terapija}}</td>
+                <td>{{i.datum}}</td>
+                <td>{{i.vreme}}</td>
+                <td>{{i.naredni_datum}}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Naziv</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Vreme</th>
+            <th scope="col">Lekar</th>
+            <th scope="col">Dodaj izvestaj</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of prethodni_pregledi ">
+            <td>{{p?.naziv}}</td>
+            <td>{{p?.datum}}</td>
+            <td>{{p?.vreme}}</td>
+            <td>{{p?.lekar}}</td>
+            <td><button class="btn btn-primary" *ngIf="!p.status" (click)="dodajIzvestaj(p)">Dodaj izvestaj</button></td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+<br>
+  </body>
+  <footer class="bg-light text-center text-lg-start" >
+    <!-- Copyright -->
+    <div class="text-center p-3"  style="background-color: rgb(112, 27, 27);">
+      <span class="text-light">© 2020 Copyright:</span>
+      <a class="text-light" href="">PeroMedik</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
+
+

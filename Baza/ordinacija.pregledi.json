@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "64ff38265ed86d528f09e74f"
+  },
+  "cena": 3500,
+  "naziv": "Holter pritiska",
+  "specijalizacija": "Kardiologija",
+  "trajanje": 45
+},
+{
+  "_id": {
+    "$oid": "64ff384a5ed86d528f09e750"
+  },
+  "cena": 15000,
+  "naziv": "Transezofaginalni ultrazvuk",
+  "specijalizacija": "Kardiologija",
+  "trajanje": 60
+},
+{
+  "_id": {
+    "$oid": "64ff38765ed86d528f09e752"
+  },
+  "cena": 15000,
+  "naziv": "Test opterecenja srca 7500",
+  "specijalizacija": "Kardiologija",
+  "trajanje": 30
+},
+{
+  "_id": {
+    "$oid": "64ff38995ed86d528f09e753"
+  },
+  "cena": 3500,
+  "naziv": "Ultrazvuk srca sa kolor doplerom",
+  "specijalizacija": "Kardiologija",
+  "trajanje": 45
+},
+{
+  "_id": {
+    "$oid": "64ff39fd5ed86d528f09e755"
+  },
+  "cena": 3600,
+  "naziv": "Specijalisticki pregled dermatologa",
+  "specijalizacija": "Dermatologija",
+  "trajanje": 30
+},
+{
+  "_id": {
+    "$oid": "64ff3a845ed86d528f09e757"
+  },
+  "cena": 3600,
+  "naziv": "Dermatoskopija",
+  "specijalizacija": "Dermatologija",
+  "trajanje": 30,
+  "spec": "Kardio"
+},
+{
+  "_id": {
+    "$oid": "64ff3aab5ed86d528f09e759"
+  },
+  "cena": 8000,
+  "naziv": "Digitalna trihoskopija",
+  "specijalizacija": "Dermatologija",
+  "trajanje": 60
+},
+{
+  "_id": {
+    "$oid": "64ff3af75ed86d528f09e75b"
+  },
+  "cena": 4500,
+  "naziv": "HP nalaz",
+  "specijalizacija": "Dermatologija",
+  "trajanje": 37
+},
+{
+  "_id": {
+    "$oid": "65008ef45ed86d528f09e778"
+  },
+  "cena": 4500,
+  "naziv": "Pregled kardiohirurga",
+  "specijalizacija": "Kardiohirurgija",
+  "trajanje": 30
+},
+{
+  "_id": {
+    "$oid": "65008f1c5ed86d528f09e779"
+  },
+  "cena": 4500,
+  "naziv": "Tretman oboljenja ushodne aorte i luka aorte",
+  "specijalizacija": "Kardiohirurgija",
+  "trajanje": 200
+},
+{
+  "_id": {
+    "$oid": "6500a2612b0a730fc15b7377"
+  },
+  "naziv": "Post COVID paket",
+  "specijalizacija": "Pulmologija",
+  "cena": 12000,
+  "trajanje": 42
+},
+{
+  "_id": {
+    "$oid": "6500a2dc2b0a730fc15b737e"
+  },
+  "naziv": "Spirometrija",
+  "specijalizacija": "Pulmologija",
+  "cena": 2500,
+  "trajanje": 17
+},
+{
+  "_id": {
+    "$oid": "6500a2ff2b0a730fc15b7386"
+  },
+  "naziv": "Bronhoskopija",
+  "specijalizacija": "Pulmologija",
+  "cena": 25000,
+  "trajanje": 100
+},
+{
+  "_id": {
+    "$oid": "65019cbb5ed86d528f09e7a2"
+  },
+  "naziv": "Epikutani test",
+  "specijalizacija": "Dermatologija",
+  "cena": 9000,
+  "trajanje": 25
+},
+{
+  "_id": {
+    "$oid": "65046402067251bf68b5c0f8"
+  },
+  "naziv": "Sociva boja",
+  "specijalizacija": "Oftalmologija",
+  "cena": 4000,
+  "trajanje": 18
+},
+{
+  "_id": {
+    "$oid": "65071645f7130e093441b8f2"
+  },
+  "naziv": "Specijalisticki pregled interniste",
+  "specijalizacija": "Kardiologija",
+  "cena": 4000,
+  "trajanje": 18
+},
+{
+  "_id": {
+    "$oid": "650897bdc488e9e9399bf73f"
+  },
+  "naziv": "Kombinovane procedure",
+  "specijalizacija": "Kardiohirurgija",
+  "cena": 700000,
+  "trajanje": 240
+},
+{
+  "_id": {
+    "$oid": "65089841c488e9e9399bf744"
+  },
+  "naziv": "Sistematski pregled za dete",
+  "specijalizacija": "Pedijatrija",
+  "cena": 8000,
+  "trajanje": 30
+},
+{
+  "_id": {
+    "$oid": "650ac11d1875a12d088a8b08"
+  },
+  "naziv": "Mikoplazma",
+  "specijalizacija": "Urologija",
+  "cena": 1000,
+  "trajanje": 10
+},
+{
+  "_id": {
+    "$oid": "650ac1391875a12d088a8b0d"
+  },
+  "naziv": "Ureaplazma",
+  "specijalizacija": "Urologija",
+  "cena": 1000,
+  "trajanje": 10
+},
+{
+  "_id": {
+    "$oid": "650ac5d01875a12d088a8b3c"
+  },
+  "naziv": "Holter EKG",
+  "specijalizacija": "Kardiologija",
+  "cena": 3500,
+  "trajanje": 60
+},
+{
+  "_id": {
+    "$oid": "650ac69a1875a12d088a8b5d"
+  },
+  "naziv": "Ispitivanje suznog filma",
+  "specijalizacija": "Oftalmologija",
+  "cena": 1500,
+  "trajanje": 10
+}]

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">PeroMedik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="pacijent">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="prikaz_lekara">Lekari</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pregledi">Pregledi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Obavestenja</a></li>
+                    </ul>
+            </div>
+            <div class="btn-container">
+                <button   class="btn btn-danger login-popup-btn" (click)="odjaviSe()">Odjavi se</button>
+             </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div style="overflow-x:auto;">
+<table class="table table-hover">
+    <thead>
+    <tr>
+    <th scope="col">Naziv pregled</th>
+    <th scope="col">Datum</th>
+    <th scope="col">Vreme</th>
+    <th scope="col">Ogranak</th>
+    <th scope="col">Lekar</th>
+    <th scope="col">Otkazi pregled</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of pregledi">
+        <td scope="row" style="font-size: large;">{{p.naziv}}</td>
+        <td scope="row">{{p.datum | date: "dd-MM-yyyy"}}</td>
+        <td scope="row">{{p.vreme}}</td>
+        <td scope="row">{{p.ogranak}}</td>
+        <td scope="row">{{p.lekar}}</td>
+        <td scope="row"><button (click)="otkazi(p)" class="btn btn-danger">Otkazi</button></td>
+    </tr>
+</tbody>
+
+</table>
+</div>
+</div>
+<br>
+<div class="container">
+    <div style="overflow-x:auto;">
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Datum</th>
+        <th scope="col">Vreme</th>
+        <th scope="col">Ime lekara</th>
+        <th scope="col">Specijalizacija</th>
+        <th scope="col">Razlog</th>
+        <th scope="col">Dijagnoza</th>
+        <th scope="col">Terapija</th>
+        <th scope="col">Naredni pregled</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let i of izvestaji">
+        <td scope="row">{{i.datum}}</td>
+        <td scope="row">{{i.vreme}}</td>
+        <td scope="row">{{i.ime_lekara}}</td>
+        <td scope="row">{{i.spec_lekara}}</td>
+        <td scope="row">{{i.razlog}}</td>
+        <td scope="row">{{i.dijagnoza}}</td>
+        <td scope="row">{{i.terapija}}</td>
+        <td scope="row">{{i.naredni_datum}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+<footer class="bg-light text-center text-lg-start" >
+    <!-- Copyright -->
+    <div class="text-center p-3"  style="background-color: rgb(112, 27, 27);">
+      <span class="text-light">© 2020 Copyright:</span>
+      <a class="text-light" href="">PeroMedik</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
